@@ -2,30 +2,57 @@
 
 * { 
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
-body{
-	font-family: 'Montserrat', sans-serif;
+body {
+
   font-weight: 300;
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
 }
 
-.navbar-collapse.collapse.show body {
-  overflow: hidden;
+input {
+  font-size: 1.3vw;
+  border-radius: 50px;
+  border: 1px solid #000;
+  padding: 1vw;
+  outline: 0;
+  margin-bottom: 1vw;
+  width: 40vw;
 }
+
+form {
+  margin-bottom: 2vw;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2vw;
   box-shadow: 0 -2px 8px 0 rgba(0,0,0,.04), 0 8px 8px 0 rgba(0,0,0,.04);
-  position: fixed;
+  position: sticky;
   background: #fff;
   width: 100%;
   top: 0;
+}
+
+button {
+  font-size: 1.4vw;
+  padding: .8vw;
+  border-radius: 50px;
+  transition: .5s;
+  margin: 0 .2vw;
+  border: none;
+  outline: 0;
+  color: #000;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
 }
 
 .header_logo {
@@ -308,7 +335,7 @@ header {
 }
 
 .hero {
-  padding: 6vw 2vw;
+  padding: 2vw;
   background: linear-gradient(90deg, #1b105f 70%, #22196c);
 }
 
@@ -336,7 +363,7 @@ header {
   height: 17vw;
 }
 
-.hero_link_a {
+.hero_link button {
   color: #fff;
   padding: 1.2vw;
   border: 2px solid #fff;
@@ -345,8 +372,14 @@ header {
   font-weight: 500;
 }
 
-.solutions, .about {
-  padding-top: 5vw;
+.form_field button {
+  transition: 0.5s;
+}
+
+.form_field button:hover {
+  color: #fff;
+  background-color: #3f2aff;
+  border: 1px solid #3f2aff;
 }
 
 .about p {
@@ -448,6 +481,10 @@ header {
   height: 100px;
 }
 
+.form_field {
+  padding: 0 2vw;
+}
+
 footer {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
@@ -462,7 +499,7 @@ footer {
   .header_desktop_nav {
     display: none;
     }
-    .navbar-collapse.collapse.show .navbar-nav, .navbar-collapse.collapsing .navbar-nav  {
+  .navbar-collapse.collapse.show .navbar-nav, .navbar-collapse.collapsing .navbar-nav  {
       background-color: #3f2aff;
       width: 100vw;
     }
@@ -471,20 +508,16 @@ footer {
     margin: 4.5vw 0;
   }
   .hero {
-    padding: 15vw 2vw;
+    padding: 2vw;
   }
   .hero_title h2 {
-    font-size: 10vw;
+    font-size: 9vw;
     margin: 8vw 0;
   }
   .hero_img {
     display: none;
   }
 
-  .hero_link_a {
-    font-size: 5vw;
-    padding: 3vw;
-  }
   .solutions_block {
     padding: 3vw;
     width: auto;
@@ -506,17 +539,10 @@ footer {
     font-size: 8vw;
     margin: 5vw 0;
   }
-  .solutions {
-    padding-top: 16vw;
-  }
 
   .now_status p, .soon_status p {
     padding: 2vw;
     font-size: 4vw;
-  }
-
-  .about {
-    padding-top: 14vw;
   }
 
   .about p {
@@ -530,8 +556,7 @@ footer {
   .ul_mobile:focus + nav {
     visibility: hidden;
   }
-}
-@media screen and (max-width: 767px) {
+
   .menu-icon:checked + label,
   .menu-icon:not(:checked) + label{
     right: 6vw;
@@ -544,5 +569,20 @@ footer {
     font-size: 12vw;
     font-weight: 800;
     color: #fff;
+  }
+
+  .form_field {
+    margin: 2vw 0;
+  }
+
+  input {
+    font-size: 4vw;
+    padding: 2vw;
+    width: 80vw;
+  }
+
+  button, .hero_link button {
+    font-size: 4vw;
+    padding: 2vw;
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Helmet} from "react-helmet";
-
+import Form from "./Components/Form"
 export default class Contact extends Component {
     render() {
         return (
@@ -11,7 +11,7 @@ export default class Contact extends Component {
             </Helmet>
             <section className="solutions">
             <h2 className="section_title">Нужно связаться с разработчиком?</h2>
-            <p>Telegram</p>
+            <Form/>
             </section>
             </>
         )
